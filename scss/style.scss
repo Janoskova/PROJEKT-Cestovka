@@ -1,0 +1,127 @@
+$font-heading: 'Montserrat', sans-serif;
+$font-text: 'Open Sans', sans-serif;
+$color-primary: #f03000;
+$spacer: 20px;
+$spacer-double: 40px;
+body {
+  margin: 0;
+  font-family: $font-text;
+}
+
+.wrapper {
+  margin: $spacer-double $spacer $spacer-double $spacer;
+}
+
+.menu {
+  &__logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  &__item {
+    display: inline-block;
+    flex-basis: calc(100% / 3);
+    text-align: center;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-primary;
+    font-weight: 600;
+    font-family: $font-heading;
+    padding: $spacer;
+    &:hover {
+      background-color: $color-primary;
+      color: white;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacer;
+
+    &__logo {
+      margin-bottom: 0;
+      padding-left: $spacer;
+    }
+
+    &__list {
+      display: inline-block;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    margin-bottom: $spacer-double;
+  }
+}
+
+.gallery {
+  margin: 30px auto $spacer-double auto;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: minmax(240px, 1fr) minmax(150px, 200px) minmax(
+      150px,
+      200px
+    );
+  row-gap: $spacer;
+
+  &__item {
+    padding: $spacer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__item:first-child {
+    background-image: url(/images/palmy.png);
+  }
+
+  &__item:nth-child(2) {
+    background-image: url(/images/jezero2.png);
+  }
+
+  &__item:nth-child(3) {
+    background-image: url(/images/nakole.png);
+  }
+
+  &__price {
+    display: inline-block;
+    padding: 10px;
+    background-color: $color-primary;
+  }
+
+  &__heading {
+    font-family: $font-heading;
+    margin: 0;
+  }
+
+  &__heading--big {
+    font-size: 28px;
+    margin-bottom: $spacer;
+  }
+
+  &__heading--small {
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__item:first-child {
+      background-image: url(/images/palmy@2x.png);
+    }
+  }
+}
