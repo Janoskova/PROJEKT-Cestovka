@@ -168,6 +168,7 @@ body {
       grid-column: 1 / -1;
     }
   }
+
   @media screen and (min-width: 960px) {
     &__grid {
       grid-template-columns: auto auto;
@@ -189,7 +190,7 @@ body {
 .advantages {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 4;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 10px;
 
   &__item {
@@ -229,19 +230,48 @@ body {
   &__description {
     margin: 0;
   }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+
+    &__item {
+      display: block;
+    }
+
+    &__picture {
+      display: block;
+      margin: auto;
+      padding: 0;
+    }
+
+    &__text {
+      text-align: center;
+    }
+
+    &__heading {
+      margin-top: $spacer;
+      margin-bottom: $spacer;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+  }
 }
 
 .news {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 3;
+  grid-template-rows: 4fr;
   gap: 20px;
 
   &__heading--section {
     color: #000000;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: $spacer;
   }
 
   &__item {
@@ -263,6 +293,16 @@ body {
   &__description {
     margin: 0;
   }
+
+  @media screen and (min-width: 960px) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr;
+
+    &__heading--section {
+      grid-column: 1 / -1;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .footer {
@@ -271,4 +311,8 @@ body {
   background-color: #444444;
   color: white;
   text-align: center;
+
+  @media screen and (min-width: 960px) {
+    margin-top: 50px;
+  }
 }
