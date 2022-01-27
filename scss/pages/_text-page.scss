@@ -1,0 +1,36 @@
+@use '../base/typography';
+
+.text {
+  margin-top: typography.$spacer-double;
+  &__division {
+    border-top: 2px solid typography.$color-primary;
+    margin: 0;
+  }
+
+  &__heading--big {
+    font-size: 36px;
+    color: typography.$color-primary;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__heading--small {
+    font-size: 24px;
+    margin-top: typography.$spacer;
+    margin-bottom: typography.$spacer;
+  }
+
+  &__picture {
+    display: inline-block;
+    margin-top: typography.$spacer-double;
+    margin-bottom: typography.$spacer-double;
+  }
+
+  &__block {
+    margin: 0;
+  }
+
+  &__block--margin {
+    margin-bottom: typography.$spacer;
+  }
+}

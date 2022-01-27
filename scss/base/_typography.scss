@@ -1,0 +1,21 @@
+$font-heading: 'Montserrat', sans-serif;
+$font-text: 'Open Sans', sans-serif;
+$color-primary: #f03000;
+$spacer: 20px;
+$spacer-double: 40px;
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: $font-text;
+}
+
+.wrapper {
+  margin: $spacer-double $spacer $spacer-double $spacer;
+}

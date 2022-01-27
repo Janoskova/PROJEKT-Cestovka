@@ -1,24 +1,5 @@
-$font-heading: 'Montserrat', sans-serif;
-$font-text: 'Open Sans', sans-serif;
-$color-primary: #f03000;
-$spacer: 20px;
-$spacer-double: 40px;
-
-h1,
-h2,
-h3 {
-  font-family: $font-heading;
-  margin: 0;
-}
-
-body {
-  margin: 0;
-  font-family: $font-text;
-}
-
-.wrapper {
-  margin: $spacer-double $spacer $spacer-double $spacer;
-}
+@use 'base/typography';
+@use 'pages/text-page';
 
 .menu {
   &__logo {
@@ -43,12 +24,12 @@ body {
   &__link {
     display: inline-block;
     text-decoration: none;
-    color: $color-primary;
+    color: typography.$color-primary;
     font-weight: 600;
-    font-family: $font-heading;
-    padding: $spacer;
+    font-family: typography.$font-heading;
+    padding: typography.$spacer;
     &:hover {
-      background-color: $color-primary;
+      background-color: typography.$color-primary;
       color: white;
     }
   }
@@ -57,11 +38,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: $spacer;
+    margin-bottom: typography.$spacer;
 
     &__logo {
       margin-bottom: 0;
-      padding-left: $spacer;
+      padding-left: typography.$spacer;
     }
 
     &__list {
@@ -70,20 +51,20 @@ body {
   }
 
   @media screen and (min-width: 960px) {
-    margin-bottom: $spacer-double;
+    margin-bottom: typography.$spacer-double;
   }
 }
 
 .gallery {
-  margin: 30px auto $spacer-double auto;
+  margin: 30px auto typography.$spacer-double auto;
   color: white;
 
   &__heading--section {
     color: #000000;
     font-size: 24px;
     font-weight: bold;
-    margin-top: $spacer-double;
-    margin-bottom: $spacer;
+    margin-top: typography.$spacer-double;
+    margin-bottom: typography.$spacer;
   }
 
   &__grid {
@@ -93,12 +74,12 @@ body {
         150px,
         200px
       );
-    gap: $spacer $spacer;
+    gap: typography.$spacer typography.$spacer;
   }
 
   &__item,
   &__item2 {
-    padding: $spacer;
+    padding: typography.$spacer;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -140,12 +121,12 @@ body {
   &__price {
     display: inline-block;
     padding: 10px;
-    background-color: $color-primary;
+    background-color: typography.$color-primary;
   }
 
   &__heading--big {
     font-size: 28px;
-    margin-bottom: $spacer;
+    margin-bottom: typography.$spacer;
   }
 
   &__heading--small {
@@ -195,7 +176,7 @@ body {
 
   &__item {
     background-color: #f0f0f0;
-    padding: $spacer;
+    padding: typography.$spacer;
     display: flex;
     justify-content: space-between;
   }
@@ -221,7 +202,7 @@ body {
 
   &__heading {
     color: #f03000;
-    font-family: $font-heading;
+    font-family: typography.$font-heading;
     font-size: 18px;
     margin-top: 0;
     margin-bottom: 10px;
@@ -251,8 +232,8 @@ body {
     }
 
     &__heading {
-      margin-top: $spacer;
-      margin-bottom: $spacer;
+      margin-top: typography.$spacer;
+      margin-bottom: typography.$spacer;
     }
   }
 
@@ -276,7 +257,7 @@ body {
 
   &__item {
     background-color: #f0f0f0;
-    padding: $spacer;
+    padding: typography.$spacer;
     font-size: 16px;
   }
 
@@ -306,8 +287,8 @@ body {
 }
 
 .footer {
-  margin-top: $spacer-double;
-  padding: $spacer;
+  margin-top: typography.$spacer-double;
+  padding: typography.$spacer;
   background-color: #444444;
   color: white;
   text-align: center;

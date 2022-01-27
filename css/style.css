@@ -14,6 +14,36 @@ body {
   margin: 40px 20px 40px 20px;
 }
 
+.text {
+  margin-top: 40px;
+}
+.text__division {
+  border-top: 2px solid #f03000;
+  margin: 0;
+}
+.text__heading--big {
+  font-size: 36px;
+  color: #f03000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.text__heading--small {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.text__picture {
+  display: inline-block;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.text__block {
+  margin: 0;
+}
+.text__block--margin {
+  margin-bottom: 20px;
+}
+
 .menu__logo {
   display: block;
   margin-left: auto;
